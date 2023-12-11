@@ -1,9 +1,15 @@
 import { useState } from "react"
-
+import { IoIosRefresh } from "react-icons/io";
 const Home = () => {
     const [formData, setFormData] = useState({
         calories: "",
         protein: ""
+    })
+
+    const [addition, setAddition] = useState({
+        num1: "",
+        num2: "",
+        total: 0
     })
 
     const handleSubmit = (e) => {
@@ -14,6 +20,13 @@ const Home = () => {
     const handleChange = (e) => {
         setFormData({
             ...formData,
+            [e.target.name]: e.target.value
+        })
+    }
+
+    const handleNums = (e) => {
+        setAddition({
+            ...addition,
             [e.target.name]: e.target.value
         })
     }
@@ -39,6 +52,27 @@ const Home = () => {
                 />
                 <button>Submit</button>
             </form>
+
+            <div className="addition">
+                <input type="number" 
+                    value={addition.num1}
+                    onChange={handleNums}
+                    name="num1"
+                />
+                <p>+</p>
+                <input type="number" 
+                    value={addition.num2}
+                    onChange={handleNums}
+                    name="num2"
+                />
+                <p>=</p>
+                <h1>{Number(addition.num1) + Number(addition.num2)}</h1>
+            </div>
+
+            <div className="reset">
+                <h1>Reset Calories</h1>
+                <IoIosRefresh onClick={() => window.location.href = "/"} className="refresh" />
+            </div>
         </div>
     )
 }

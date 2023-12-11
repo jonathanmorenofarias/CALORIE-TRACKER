@@ -21,3 +21,25 @@
     align-items: start;
     gap: 1rem;
 }
+
+.addition {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+.addition input {
+    width: 3rem;
+    height: 1rem;
+}
+
+.reset {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.refresh {
+    font-size: 2rem;
+    cursor: pointer;
+}
