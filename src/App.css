@@ -13,6 +13,17 @@
     padding-bottom: 1rem;
     margin-top: 2rem;
 }
+.setup-page {
+    display : flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.already-done {
+    font-size: 2rem;
+    cursor: pointer;
+}
 
 .food-form {
     display: flex;
