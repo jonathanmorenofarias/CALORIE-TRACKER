@@ -5,7 +5,6 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 2rem;
     background-color: black;
     color: white;
 }
@@ -25,11 +24,24 @@
     text-decoration: none;
     color: white;
     padding: 1rem;
-    margin: 1.5rem;
+    margin-right: 2rem;
     font-size: 1rem;
     border-radius: 10px;
     background-color: var(--macrodark);
     cursor: pointer;
+}
+.macro-logo  {
+    text-decoration: none;
+    margin: 1rem 1rem 1rem 2rem;
+    height: 4rem;
+}
+
+.body-signup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80vh;
 }
 
 .background-signup {
@@ -42,13 +54,11 @@
     border-radius: 10px;
     width: 40rem;
     height: 50rem;
-    margin-bottom: 2rem;
 }
 
 .background-signup h1 {
     text-align: center;
     font-size: 2rem;
-    font-weight: 400;
 }
 
 .signup-form, .signup-elements {
@@ -60,7 +70,8 @@
 }
 
 .signup-form button {
-
+    background-color: var(--macroblue);
+    color: white;
     align-self: center;
     width: 100%;
     margin-top: 1rem;
@@ -93,18 +104,23 @@
 @media screen and (max-width: 600px) {
     .background-signup {
         width: 90vw;
-        height: 80vh;
+        height: 75vh;
     }
-
-    .login-header h1 {
-        font-size: 1rem;
+    
+    .login-header a {
+        font-size: .9rem;
+        padding: .9rem;
     }
 
     .background-signup h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
+    .signup-elements label {
+        font-size: .9rem;
+    }
     .signup-elements input {
-        width: 70vw;
+        width: 65vw;
+        height: 2rem;
     }
 }

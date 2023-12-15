@@ -1,5 +1,7 @@
 import { useState } from "react"
-import { IoIosRefresh } from "react-icons/io";
+import { IoIosRefresh } from "react-icons/io"
+import Navbar from "../components/Navbar"
+
 const Home = () => {
     const [formData, setFormData] = useState({
         calories: "",
@@ -33,6 +35,7 @@ const Home = () => {
 
     return (
         <div>
+            <Navbar/>
             <h1>Hey, {localStorage.getItem("name")} </h1>
             <h2>Current Calories left: {localStorage.getItem("calories")}</h2>
             <h2>Current Protein left: {localStorage.getItem("protein")}</h2>
