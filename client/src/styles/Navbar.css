@@ -1,0 +1,24 @@
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+
+.navbar ul {
+    display: flex;
+    gap: 1.5rem;
+    margin: 2rem;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar ul li {
+    list-style: none;
+    color: white;
+    cursor: pointer;
+}
